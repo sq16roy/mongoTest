@@ -89,6 +89,19 @@ app.put('/book/:id', function(req, res) {
     });
 });
 
+app.delete('/book/:id', function(req, res) {
+    Book.findOneAndRemove({
+        _id: req.params.id
+    }, function(err, book){
+        if(err) {
+            res.send('error deleting');
+        } else {
+            console.log(book);
+            res.send(book);
+        }
+    });
+});
+
 app.listen(port, function() {
     console.log('app listening on port' + port);
 });
