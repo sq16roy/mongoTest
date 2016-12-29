@@ -1,6 +1,6 @@
 # mongoTest
 # 1
-open the folder in your cmd.
+open the folder in your cmd. Run npm install
 # 2
 Run node app
 # 3
